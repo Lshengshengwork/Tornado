@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <link rel="stylesheet" href="{{ static_url('css/home.css') }}">
+    <script type="text/javascript" charset="utf-8" src="{{ static_url('js/jquery.js') }}"></script>
+</head>
+<body>
+    <h1>这里是home页面</h1>
+    <h1>num: {{ num }}</h1>
+    <h1>num + 10: {{ num + 10}}</h1>
+
+    <h1>{{ per["name"],per["age"] }}</h1>
+
+    {% if flag == 0 %}
+    <h1>大拿不白拿</h1>
+    {% end %}
+
+    <ul>
+        {% for stu in stus %}
+        <li>{{ stu["name"] }}</li>
+        {% end %}
+    </ul>
+
+
+
+</body>
+</html>
